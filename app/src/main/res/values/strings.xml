@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PayTraffic</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_kocurmeler">Köçürmələrim</string>
+    <string name="menu_bonuslar">Bonuslarım</string>
+    <string name="menu_odemeler">Ödəmələr</string>
+    <string name="menu_melumat">Məlumat</string>
+    <string name="menu_Elaqe">Əlaqə</string>
+    <string name="menu_Bonuslara_cevir">Bonuslarını çevir</string>
+    <string name="menu_paylash">Dostlarını dəvət et</string>
+    <string name="menu_Tenzimlemeler">Tənzimləmələr</string>
+    <string name="menu_chixish">Çıxış</string>
+    <string name="open_drawer">open</string>
+    <string name="close_drawer">close</string>
+</resources>

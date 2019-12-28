@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_odemeler">
+
+
+<!--    kocurmeler-->
+    <fragment
+        android:id="@+id/nav_kocurmeler"
+        android:name="com.aris.paytraffic.drawerMenu.TransfersActivity"
+        android:label="@string/menu_kocurmeler"
+        tools:layout="@layout/activity_payments" />
+<!--bonuslar-->
+    <fragment
+        android:id="@+id/nav_bonuslar"
+        android:name="com.aris.paytraffic.drawerMenu.BonuceActivity"
+        android:label="@string/menu_bonuslar"
+        tools:layout="@layout/activity_bonuce" />
+
+    <fragment
+        android:id="@+id/nav_odemeler"
+        android:name="com.aris.paytraffic.drawerMenu.PaymentsActivity"
+        android:label="@string/menu_odemeler"
+        tools:layout="@layout/activity_payments" />
+
+    <fragment
+        android:id="@+id/nav_melumat"
+        android:name="com.aris.paytraffic.drawerMenu.InfoActivity"
+        android:label="@string/menu_melumat"
+        tools:layout="@layout/activity_info" />
+
+    <fragment
+        android:id="@+id/nav_elaqe"
+        android:name="com.aris.paytraffic.drawerMenu.ContactActivity"
+        android:label="@string/menu_Elaqe"
+        tools:layout="@layout/activity_contact" />
+
+    <fragment
+        android:id="@+id/nav_bonuslara_cevir"
+        android:name="com.aris.paytraffic.drawerMenu.ConvertToBounce"
+        android:label="@string/menu_Bonuslara_cevir"
+        tools:layout="@layout/activity_convert_to_bounce" />
+
+    <fragment
+        android:id="@+id/nav_devetet"
+        android:name="com.aris.paytraffic.drawerMenu.InviteActivity"
+        android:label="@string/menu_paylash"
+        tools:layout="@layout/activity_invite" />
+
+
+    <fragment
+        android:id="@+id/nav_tenzimlemeler"
+        android:name="com.aris.paytraffic.drawerMenu.SettingsActivity"
+        android:label="@string/menu_Tenzimlemeler"
+        tools:layout="@layout/activity_settings" />
+
+
+</navigation>
