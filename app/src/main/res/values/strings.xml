@@ -18,4 +18,30 @@
     <string name="menu_chixish">Çıxış</string>
     <string name="open_drawer">open</string>
     <string name="close_drawer">close</string>
+
+    <string name="account_id">Hesab: %1$s</string>
+    <string name="edittext_hint"><font size="32">Məbləğ</font></string>
+
+
+
+    <string name="title_1">Cool card</string>
+    <string name="title_2">Ok card</string>
+    <string name="title_3">Bad card</string>
+    <string name="title_4">Ugly card</string>
+
+    <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam eget ligula eu lectus lobortis condimentum.</string>
+
+
+    <string-array name="planets_array">
+        <item>AZN</item>
+        <item>USD</item>
+    </string-array>
+
+    <string-array name="planets_array1">
+        <item>Visa / Visa electron</item>
+        <item>Matercard / Maestro</item>
+    </string-array>
+
+
+
 </resources>

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".drawerMenu.TransfersActivity"></activity>
+        <activity android:name=".activiy.QrPayments"></activity>
+        <activity android:name=".activiy.BalanceIncreases" />
+        <activity android:name=".activiy.QrCodeActivity" />
+        <activity android:name=".drawerMenu.TransfersActivity" />
         <activity android:name=".drawerMenu.SettingsActivity" />
         <activity android:name=".drawerMenu.PaymentsActivity" />
         <activity android:name=".drawerMenu.InviteActivity" />
