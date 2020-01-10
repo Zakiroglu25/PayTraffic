@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activiy.QrPayments"></activity>
+        <activity android:name=".activiy.DonePayments" />
+        <activity android:name=".activiy.QrPayments" />
         <activity android:name=".activiy.BalanceIncreases" />
         <activity android:name=".activiy.QrCodeActivity" />
         <activity android:name=".drawerMenu.TransfersActivity" />
@@ -20,8 +21,11 @@
         <activity android:name=".drawerMenu.ConvertToBounce" />
         <activity android:name=".drawerMenu.ContactActivity" />
         <activity android:name=".drawerMenu.BonuceActivity" />
+        <activity android:name=".LoginActivity"
+            android:theme="@style/AppTheme.Light"/>
+
         <activity
-            android:name=".LoginActivity"
+            android:name=".helper.Splash"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.Light">
             <intent-filter>
@@ -33,6 +37,10 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

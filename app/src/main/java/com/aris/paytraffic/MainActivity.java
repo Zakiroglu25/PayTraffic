@@ -7,7 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.viewpager.widget.ViewPager;
 
 import com.aris.paytraffic.drawerMenu.BonuceActivity;
@@ -25,106 +23,52 @@ import com.aris.paytraffic.drawerMenu.InfoActivity;
 import com.aris.paytraffic.drawerMenu.InviteActivity;
 import com.aris.paytraffic.drawerMenu.PaymentsActivity;
 import com.aris.paytraffic.drawerMenu.TransfersActivity;
-import com.aris.paytraffic.viewPager.CardItem;
-import com.aris.paytraffic.viewPager.CardPagerAdapter;
-import com.aris.paytraffic.viewPager.ShadowTransformer;
+import com.aris.paytraffic.viewPager.DensityUtil;
+import com.aris.paytraffic.viewPager.ViewPagerAdpter;
+import com.aris.paytraffic.viewPager.ZoomOutPagerTransformer;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
-    private AppBarConfiguration mAppBarConfiguration;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
     Toolbar toolbar;
-    ViewPager viewPager;
-    private ShadowTransformer mCardShadowTransformer;
-    CardPagerAdapter mCardAdapter;
+    private ViewPager  banner_main_ZoomOut;
+
+    int arrayImgs[] = {R.drawable.lebedun,
+            R.drawable.lebedun,
+            R.drawable.lebedun,
+            R.drawable.lebedun,
+            R.drawable.lebedun,
+            R.drawable.lebedun};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        viewPager = (ViewPager) findViewById(R.id.viewPager);
-//
-//        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
-//
-//
-//        viewPager.setAdapter(viewPagerAdapter);
-//
-//
-//
-//
-//        dotscount = viewPagerAdapter.getCount();
-//        dots = new ImageView[dotscount];
-//
-//        for(int i = 0; i < dotscount; i++){
-//
-//            dots[i] = new ImageView(this);
-//            dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.non_active_dot));
-//
-//
-//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-//
-//            params.getLayoutDirection();
-//            params.setMarginStart(50);
-//            //params.setMargins(8, 0, 8, 0);
-//
-//          //  sliderDotspanel.addView(dots[i], params);
-//
-//        }
-//
-//        dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
-//
-//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//
-//                for(int i = 0; i< dotscount; i++){
-//                    dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.non_active_dot));
-//                }
-//
-//                dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
-//
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//
-//            }
-//        });
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initViews();
-
-
-        viewPager =findViewById(R.id.viewPager);
-        mCardAdapter = new CardPagerAdapter();
-        mCardAdapter .addCardItem(new CardItem(R.id.categoryImageView,R.id.categoryName));
-        mCardAdapter .addCardItem(new CardItem(R.id.categoryImageView,R.id.categoryName));
-        mCardAdapter .addCardItem(new CardItem(R.id.categoryImageView,R.id.categoryName));
-        mCardAdapter .addCardItem(new CardItem(R.id.categoryImageView,R.id.categoryName));
-        mCardAdapter .addCardItem(new CardItem(R.id.categoryImageView,R.id.categoryName));
-//        mCardAdapter.addCardItem(new CardItem(R.string.title_1, R.string.text_1));
-//        mCardAdapter.addCardItem(new CardItem(R.string.title_2, R.string.text_1));
-//        mCardAdapter.addCardItem(new CardItem(R.string.title_3, R.string.text_1));
-//        mCardAdapter.addCardItem(new CardItem(R.string.title_4, R.string.text_1));
-
-
-        mCardShadowTransformer = new ShadowTransformer(viewPager, mCardAdapter);
-        // mFragmentCardShadowTransformer = new ShadowTransformer(mViewPager, mFragmentCardAdapter);
-
-        viewPager.setAdapter(mCardAdapter);
-        viewPager.setPageTransformer(false, mCardShadowTransformer);
-        viewPager.setOffscreenPageLimit(3);
-
-        //  DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-
+        banner_main_ZoomOut = (ViewPager) findViewById(R.id.banner_main_ZoomOut);
+        banner_main_ZoomOut.setPageMargin(-DensityUtil.dip2px(getApplicationContext(), 10));
+        banner_main_ZoomOut.setOffscreenPageLimit(3);
+        banner_main_ZoomOut.setPageTransformer(false, (ViewPager.PageTransformer) new ZoomOutPagerTransformer(0.7f));
+        banner_main_ZoomOut.setAdapter(new ViewPagerAdpter(getData()));
+    }
+    private List<ImageView> getData() {
+        List<ImageView> imgList = new ArrayList<>();
+        for (int i = 0; i < arrayImgs.length; i++) {
+            ImageView imageView = new ImageView(getApplicationContext());
+            imageView.setImageResource(arrayImgs[i]);
+            imgList.add(imageView);
+        }
+        return imgList;
     }
 
     private void initViews() {

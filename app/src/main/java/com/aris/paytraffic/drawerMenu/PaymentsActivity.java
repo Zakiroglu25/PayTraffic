@@ -29,6 +29,14 @@ public class PaymentsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payments);
 
+
+        Toolbar myChildToolbar =
+                findViewById(R.id.toolbar);
+        setSupportActionBar(myChildToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        myChildToolbar.setNavigationOnClickListener(view -> onBackPressed());
+
         //initialize every thing first
         categoryList = new ArrayList<>();
         //add animals to our animalsList

@@ -1,11 +1,14 @@
 package com.aris.paytraffic.activiy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -14,11 +17,29 @@ import com.aris.paytraffic.R;
 public class QrPayments extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     TextView receive;
+    Button btnPayment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_payments);
+
+        Toolbar myChildToolbar =
+                findViewById(R.id.toolbar);
+        setSupportActionBar(myChildToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        myChildToolbar.setNavigationOnClickListener(view -> onBackPressed());
+
+        btnPayment = findViewById(R.id.buttonOde);
+        btnPayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QrPayments.this, DonePayments.class);
+                startActivity(intent);
+            }
+        });
+
 
         Spinner spinner = findViewById(R.id.spinner2);
 // Create an ArrayAdapter using the string array and a default spinner layout
@@ -30,6 +51,9 @@ public class QrPayments extends AppCompatActivity implements AdapterView.OnItemS
         spinner.setAdapter(adapter);
 
         receive = (TextView) findViewById(R.id.qr_code_textview);
+
+
+
 
 
         String s = getIntent().getStringExtra("EdiTtEXTvALUE");
