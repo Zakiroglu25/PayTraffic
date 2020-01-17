@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CompoundButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -13,11 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.aris.paytraffic.drawerMenu.BonuceActivity;
+import com.aris.paytraffic.drawerMenu.ContactActivity;
 import com.aris.paytraffic.drawerMenu.ConvertToBounce;
 import com.aris.paytraffic.drawerMenu.InfoActivity;
 import com.aris.paytraffic.drawerMenu.InviteActivity;
@@ -31,19 +33,19 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
     Toolbar toolbar;
-    private ViewPager  banner_main_ZoomOut;
+    ConstraintLayout constayner;
+    private ViewPager  viewPager;
 
     int arrayImgs[] = {R.drawable.lebedun,
-            R.drawable.lebedun,
-            R.drawable.lebedun,
-            R.drawable.lebedun,
-            R.drawable.lebedun,
-            R.drawable.lebedun};
+            R.drawable.viewpager_dovlet,
+            R.drawable.kabel_viewpager,
+            R.drawable.telefon_viewpager,
+            R.drawable.bank_view};
 
 
     @Override
@@ -51,15 +53,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        Button button = findViewById(R.id.butun_xidmetler);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PaymentsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initViews();
         NavigationView navigationView = findViewById(R.id.nav_view);
-        banner_main_ZoomOut = (ViewPager) findViewById(R.id.banner_main_ZoomOut);
-        banner_main_ZoomOut.setPageMargin(-DensityUtil.dip2px(getApplicationContext(), 10));
-        banner_main_ZoomOut.setOffscreenPageLimit(3);
-        banner_main_ZoomOut.setPageTransformer(false, (ViewPager.PageTransformer) new ZoomOutPagerTransformer(0.7f));
-        banner_main_ZoomOut.setAdapter(new ViewPagerAdpter(getData()));
+        constayner = findViewById(R.id.constainer);
+        viewPager =  findViewById(R.id.viewPager);
+        viewPager.setPageMargin(-DensityUtil.dip2px(getApplicationContext(), 10));
+        viewPager.setOffscreenPageLimit(3);
+        viewPager.setPageTransformer(false, (ViewPager.PageTransformer) new ZoomOutPagerTransformer(0.7f));
+        viewPager.setAdapter(new ViewPagerAdpter(getData()));
+
+
+
+
+
+
     }
     private List<ImageView> getData() {
         List<ImageView> imgList = new ArrayList<>();
@@ -98,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, PaymentsActivity.class));
                 break;
             case R.id.nav_elaqe:
-                startActivity(new Intent(this, InfoActivity.class));
+                startActivity(new Intent(this, ContactActivity.class));
                 break;
             case R.id.nav_bonuslara_cevir:
                 startActivity(new Intent(this, ConvertToBounce.class));
@@ -106,6 +125,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_devetet:
                 startActivity(new Intent(this, InviteActivity.class));
                 break;
+            case R.id.nav_melumat:
+                startActivity(new Intent(this,InfoActivity.class));
             default:
                 Toast.makeText(this, menuItem.getTitle(), Toast.LENGTH_SHORT).show();
                 break;
@@ -116,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+      //  getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -130,11 +151,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onClick(View v) {
-
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
     }
 }

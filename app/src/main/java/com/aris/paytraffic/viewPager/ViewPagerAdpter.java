@@ -2,6 +2,7 @@ package com.aris.paytraffic.viewPager;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 
 import androidx.viewpager.widget.PagerAdapter;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class ViewPagerAdpter extends PagerAdapter {
     List<ImageView> imgList;
+    private AdapterView.OnItemClickListener mOnItemClickListener;
 
     public ViewPagerAdpter(List<ImageView> imgList) {
         this.imgList = imgList;

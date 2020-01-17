@@ -1,28 +1,29 @@
-package com.aris.paytraffic;
+package com.aris.paytraffic.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
+import com.aris.paytraffic.MainActivity;
+import com.aris.paytraffic.R;
+
+public class Register extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-        Button button = findViewById(R.id.daxilol);
+        setContentView(R.layout.activity_register);
+
+        Button button = findViewById(R.id.qeydiyyatdankec);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(Register.this, MainActivity.class);
                 startActivity(intent);
             }
         });
     }
-
-
 }

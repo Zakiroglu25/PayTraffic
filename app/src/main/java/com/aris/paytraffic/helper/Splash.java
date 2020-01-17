@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.aris.paytraffic.LoginActivity;
+import com.aris.paytraffic.auth.LoginActivity;
 import com.aris.paytraffic.R;
 
 public class Splash extends AppCompatActivity {

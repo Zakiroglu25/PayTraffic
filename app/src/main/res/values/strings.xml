@@ -7,6 +7,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_search">Search</string>
 
+
+
+
     <string name="menu_kocurmeler">Köçürmələrim</string>
     <string name="menu_bonuslar">Bonuslarım</string>
     <string name="menu_odemeler">Ödəmələr</string>
@@ -21,6 +24,11 @@
 
     <string name="account_id">Hesab: %1$s</string>
     <string name="edittext_hint"><font size="32">Məbləğ</font></string>
+
+    <string name="payments">Odemeler</string>
+    <string name="home">Əsas Sehive</string>
+    <string name="heart">Sevimli</string>
+
 
 
     <!--    <string name="title_1">Cool card</string>-->
