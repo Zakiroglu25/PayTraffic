@@ -1,9 +1,9 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Base application shablon. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- Customize your shablon here. -->
+        <item name="colorPrimary">#ffffff</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -12,14 +12,15 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+
+
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="AppTheme.Light"
-        parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme.Light" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimaryDark">#FFFFFF</item>
     </style>
 
@@ -28,7 +29,19 @@
         <item name="android:listPreferredItemHeightSmall">40dp</item><!-- menu item height-->
     </style>
 
+    <style name="AppTheme.NoActionBar.L" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/AppTheme</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
 
+    <style name="AppTheme.Night" parent="AppTheme">
+        <item name="colorPrimaryDark">#292929</item>
+    </style>
 
 </resources>

@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/navigation_rating"
-        android:icon="@drawable/ic_kredit_car_bottom_nav"
-        android:title="@string/payments" />
 
     <item
-        android:id="@+id/navigation_actions"
+        android:id="@+id/navigation_phone"
+        android:checked="false"
+        android:icon="@drawable/phone"
+        android:title="@string/phone" />
+    <item
+        android:id="@+id/navigation_notfication"
+        android:checked="false"
+        android:icon="@drawable/bell"
+        android:title="@string/notfications" />
+    <item
+        android:id="@+id/navigation_mainmenu"
+        android:checked="true"
         android:icon="@drawable/ic_home"
-        android:title="@string/home" />
-
+        android:title="@string/mainmenu" />
     <item
-        android:id="@+id/navigation_search"
+        android:id="@+id/navigation_payments"
+        android:checked="false"
+        android:icon="@drawable/credit_cart"
+        android:title="@string/payments" />
+    <item
+        android:id="@+id/navigation_bounces"
+        android:checked="false"
         android:icon="@drawable/ic_heart"
-        android:title="@string/heart" />
+        android:title="@string/bonuslar" />
 
 
 </menu>

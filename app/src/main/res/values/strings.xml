@@ -8,15 +8,16 @@
     <string name="action_search">Search</string>
 
 
-
-
     <string name="menu_kocurmeler">Köçürmələrim</string>
+    <string name="menu_shablon">Şablonlar</string>
+    <string name="menu_kartlar">Kartlar</string>
     <string name="menu_bonuslar">Bonuslarım</string>
     <string name="menu_odemeler">Ödəmələr</string>
-    <string name="menu_melumat">Məlumat</string>
+    <string name="menu_melumat">Şirkət haqqında</string>
     <string name="menu_Elaqe">Əlaqə</string>
     <string name="menu_Bonuslara_cevir">Bonuslarını çevir</string>
     <string name="menu_paylash">Dostlarını dəvət et</string>
+    <string name="menu_teklif">Təklif</string>
     <string name="menu_Tenzimlemeler">Tənzimləmələr</string>
     <string name="menu_chixish">Çıxış</string>
     <string name="open_drawer">open</string>
@@ -25,10 +26,16 @@
     <string name="account_id">Hesab: %1$s</string>
     <string name="edittext_hint"><font size="32">Məbləğ</font></string>
 
-    <string name="payments">Odemeler</string>
-    <string name="home">Əsas Sehive</string>
-    <string name="heart">Sevimli</string>
 
+    <string name="phone"></string>
+    <string name="notfications"></string>
+    <string name="payments"></string>
+    <string name="mainmenu"></string>
+    <string name="bonuslar"></string>
+
+
+    <string name="text">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like"</string>
 
 
     <!--    <string name="title_1">Cool card</string>-->
@@ -48,6 +55,13 @@
         <item>Visa / Visa electron</item>
         <item>Matercard / Maestro</item>
     </string-array>
+    <string name="title_activity_cards">Cards</string>
 
+
+    <string-array name="colorsspinners">
+        <item>Kartın növünü  seçin</item>
+        <item>Master Card</item>
+        <item>VISA</item>
+    </string-array>
 
 </resources>

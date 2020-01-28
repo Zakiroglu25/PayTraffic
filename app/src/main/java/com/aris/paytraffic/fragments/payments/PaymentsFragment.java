@@ -1,13 +1,16 @@
-package com.aris.paytraffic.drawerMenu;
+package com.aris.paytraffic.fragments.payments;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
 import com.aris.paytraffic.R;
 import com.aris.paytraffic.adapter.RecyclerViewAdapter;
 import com.aris.paytraffic.drawerMenu.model.Category;
@@ -15,27 +18,30 @@ import com.aris.paytraffic.drawerMenu.model.Category;
 import java.util.ArrayList;
 import java.util.List;
 
+public class PaymentsFragment extends Fragment {
 
-public class PaymentsActivity extends AppCompatActivity {
-
+    private PaymentsViewModel mViewModel;
     private RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
     RecyclerView.LayoutManager layoutManager;
     List<Category> categoryList;
 
 
+    public static PaymentsFragment newInstance() {
+        return new PaymentsFragment();
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payments);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.payments_fragment, container, false);
+    return root;
+    }
 
 
-        Toolbar myChildToolbar =
-                findViewById(R.id.toolbar);
-        setSupportActionBar(myChildToolbar);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        // Get a support ActionBar corresponding to this toolbar
-        myChildToolbar.setNavigationOnClickListener(view -> onBackPressed());
 
         //initialize every thing first
         categoryList = new ArrayList<>();
@@ -53,21 +59,15 @@ public class PaymentsActivity extends AppCompatActivity {
         categoryList.add(new Category("Bank ödənişləri" , R.drawable.money));
         categoryList.add(new Category("Təhsil" , R.drawable.college));
 
-        //initialize the adapter with list of animals
         recyclerViewAdapter = new RecyclerViewAdapter(categoryList);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        layoutManager = new GridLayoutManager(this,2);
-        //set recycler layout manager to decide it will scroll vertically or horizontally
-        //add linear layout  manager to make it vertical
+        recyclerView = view.findViewById(R.id.recyclerView);
+        layoutManager = new GridLayoutManager(getContext(),2);
         recyclerView.setLayoutManager(layoutManager);
 
-        //add our adapter to the recyclerView to start showing items
         recyclerView.setAdapter(recyclerViewAdapter);
-
-
 
 
     }
 
-}
+    }

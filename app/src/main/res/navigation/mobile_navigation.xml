@@ -3,59 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_odemeler"
-    tools:ignore="UnusedNavigation">
+    app:startDestination="@+id/navigation_mainmenu"
+    >
 
 
 <!--    kocurmeler-->
     <fragment
-        android:id="@+id/nav_kocurmeler"
-        android:name="com.aris.paytraffic.drawerMenu.TransfersActivity"
-        android:label="@string/menu_kocurmeler"
-        tools:layout="@layout/activity_payments" />
+        android:id="@+id/navigation_phone"
+        android:name="com.aris.paytraffic.fragments.phone.PhoneFragment"
+        android:label="@string/phone"
+        tools:layout="@layout/phone_fragment" />
 <!--bonuslar-->
     <fragment
-        android:id="@+id/nav_bonuslar"
-        android:name="com.aris.paytraffic.drawerMenu.BonuceActivity"
-        android:label="@string/menu_bonuslar"
-        tools:layout="@layout/activity_bonuce" />
+        android:id="@+id/navigation_notfication"
+        android:name="com.aris.paytraffic.fragments.notfication.NotficationFragment"
+        android:label="@string/notfications"
+        tools:layout="@layout/notfication_fragment" />
 
     <fragment
-        android:id="@+id/nav_odemeler"
-        android:name="com.aris.paytraffic.drawerMenu.PaymentsActivity"
-        android:label="@string/menu_odemeler"
-        tools:layout="@layout/activity_payments" />
+        android:id="@+id/navigation_mainmenu"
+        android:name="com.aris.paytraffic.fragments.mainMenu.MainMenuFragment"
+        android:label="@string/mainmenu"
+        tools:layout="@layout/main_menu_fragment" />
 
     <fragment
-        android:id="@+id/nav_melumat"
-        android:name="com.aris.paytraffic.drawerMenu.InfoActivity"
-        android:label="@string/menu_melumat"
-        tools:layout="@layout/activity_info" />
+        android:id="@+id/navigation_payments"
+        android:name="com.aris.paytraffic.fragments.payments.PaymentsFragment"
+        android:label="@string/payments"
+        tools:layout="@layout/payments_fragment" />
 
     <fragment
-        android:id="@+id/nav_elaqe"
-        android:name="com.aris.paytraffic.drawerMenu.ContactActivity"
-        android:label="@string/menu_Elaqe"
-        tools:layout="@layout/activity_contact" />
+        android:id="@+id/navigation_bounces"
+        android:name="com.aris.paytraffic.fragments.bounces.BounceFragment"
+        android:label="@string/bonuslar"
+        tools:layout="@layout/bounce_fragment" />
 
-    <fragment
-        android:id="@+id/nav_bonuslara_cevir"
-        android:name="com.aris.paytraffic.drawerMenu.ConvertToBounce"
-        android:label="@string/menu_Bonuslara_cevir"
-        tools:layout="@layout/activity_convert_to_bounce" />
-
-    <fragment
-        android:id="@+id/nav_devetet"
-        android:name="com.aris.paytraffic.drawerMenu.InviteActivity"
-        android:label="@string/menu_paylash"
-        tools:layout="@layout/activity_invite" />
-
-
-    <fragment
-        android:id="@+id/nav_tenzimlemeler"
-        android:name="com.aris.paytraffic.drawerMenu.SettingsActivity"
-        android:label="@string/menu_Tenzimlemeler"
-        tools:layout="@layout/activity_settings" />
 
 
 </navigation>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.aris.paytraffic">
 
     <application
@@ -8,9 +9,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".auth.PhoneCode"
-            android:theme="@style/AppTheme.Light"/>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".drawerMenu.OfferActivity"></activity>
+        <activity android:name=".activiy.KabelTv" />
+        <activity android:name=".activiy.EditProfilectivity" />
+        <activity
+            android:name=".activiy.ProfilActivity"
+            android:theme="@style/AppTheme.Night" />
+        <activity android:name=".activiy.SearchActivity" />
+        <activity
+            android:name=".drawerMenu.Cards"
+            android:label="@string/title_activity_cards"
+            android:theme="@style/AppTheme.NoActionBar.L" />
+        <activity android:name=".drawerMenu.addItem.AddNewItem" />
+        <activity android:name=".activiy.MobilePayment" />
+        <activity android:name=".activiy.MobileOperator" />
+        <activity
+            android:name=".auth.PhoneCode"
+            android:theme="@style/AppTheme.Light" />
         <activity android:name=".auth.FingerPrint" />
         <activity
             android:name=".auth.Register"
@@ -24,12 +41,10 @@
         <activity android:name=".activiy.QrCodeActivity" />
         <activity android:name=".drawerMenu.TransfersActivity" />
         <activity android:name=".drawerMenu.SettingsActivity" />
-        <activity android:name=".drawerMenu.PaymentsActivity" />
         <activity android:name=".drawerMenu.InviteActivity" />
         <activity android:name=".drawerMenu.InfoActivity" />
         <activity android:name=".drawerMenu.ConvertToBounce" />
         <activity android:name=".drawerMenu.ContactActivity" />
-        <activity android:name=".drawerMenu.BonuceActivity" />
         <activity
             android:name=".auth.LoginActivity"
             android:theme="@style/AppTheme.Light" />

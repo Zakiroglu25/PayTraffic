@@ -12,8 +12,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,13 +37,15 @@
             <EditText
                 android:id="@+id/editText21"
                 android:layout_width="0dp"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginEnd="16dp"
-                android:background="#fff"
+                android:background="@drawable/login_gray_line"
                 android:ems="10"
+                android:cursorVisible="true"
                 android:hint="Ad və Soyad"
+                android:paddingLeft="24dp"
                 android:inputType="textPersonName"
                 android:textColor="#000"
                 android:textColorHint="#CD525252"
@@ -50,145 +54,86 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
-            <View
-                android:id="@+id/view21"
+            <EditText
+                android:id="@+id/editText22"
                 android:layout_width="0dp"
-                android:layout_height="1dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
-                android:background="#F0F0F0"
-                android:backgroundTint="#C4C4C4"
+                android:background="@drawable/login_gray_line"
+                android:ems="10"
+                android:hint="Email"
+                android:paddingLeft="24dp"
+                android:inputType="textPersonName"
+                android:textColor="#000"
+                android:textColorHint="#CD525252"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText21" />
 
             <EditText
-                android:id="@+id/editText22"
+                android:id="@+id/editText23"
                 android:layout_width="0dp"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
-                android:background="#fff"
+                android:background="@drawable/login_gray_line"
                 android:ems="10"
-                android:hint="Email"
-                android:inputType="textPersonName"
+                android:hint="Şəxsiyyət vəsiqəsinin seriya nömrəsi"
+                android:inputType="number"
                 android:textColor="#000"
+                android:paddingLeft="24dp"
                 android:textColorHint="#CD525252"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view21" />
-
-            <View
-                android:id="@+id/view22"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="#F0F0F0"
-                android:backgroundTint="#C4C4C4"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText22" />
 
             <EditText
-                android:id="@+id/editText23"
+                android:id="@+id/editText24"
                 android:layout_width="0dp"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
-                android:background="#fff"
+                android:background="@drawable/login_gray_line"
                 android:ems="10"
-                android:hint="Şəxsiyyət vəsiqəsinin seriya nömrəsi"
+                android:hint="PIN"
                 android:inputType="textPersonName"
                 android:textColor="#000"
+                android:paddingLeft="24dp"
                 android:textColorHint="#CD525252"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view22" />
-
-            <View
-                android:id="@+id/view23"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:background="#F0F0F0"
-                android:backgroundTint="#C4C4C4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText23" />
 
             <EditText
-                android:id="@+id/editText24"
-                android:layout_width="0dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="16dp"
-                android:background="#fff"
-                android:ems="10"
-                android:hint="PIN"
-                android:inputType="textPersonName"
-                android:textColor="#000"
-                android:textColorHint="#CD525252"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view23" />
-
-            <View
-                android:id="@+id/view24"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="#F0F0F0"
-                android:backgroundTint="#C4C4C4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText24" />
-
-            <EditText
                 android:id="@+id/editText25"
                 android:layout_width="0dp"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
-                android:background="#fff"
+                android:background="@drawable/login_gray_line"
                 android:ems="10"
                 android:hint="PIN - i təsdiq edin"
                 android:inputType="textPersonName"
                 android:textColor="#000"
+                android:paddingLeft="24dp"
                 android:textColorHint="#CD525252"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view24" />
-
-            <View
-                android:id="@+id/view25"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="#F0F0F0"
-                android:backgroundTint="#C4C4C4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText25" />
+                app:layout_constraintTop_toBottomOf="@+id/editText24" />
 
             <Button
                 android:id="@+id/qeydiyyatdankec"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/qr_balans_artir_button_line"
                 android:text="Qeydiyyatdan keç"
@@ -196,7 +141,7 @@
                 android:textColor="#0B4B9B"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view25" />
+                app:layout_constraintTop_toBottomOf="@+id/editText25" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

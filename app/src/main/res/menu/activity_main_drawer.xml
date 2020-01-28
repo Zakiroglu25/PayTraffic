@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:enabled="true">
+
+    <group
+        android:checkableBehavior="none"
+        android:enabled="true">
         <item
             android:id="@+id/nav_kocurmeler"
             android:icon="@drawable/ic_transfer"
             android:title="@string/menu_kocurmeler" />
         <item
-            android:id="@+id/nav_bonuslar"
-            android:icon="@drawable/ic_heart"
-            android:title="@string/menu_bonuslar" />
-        <item
             android:id="@+id/nav_odemeler"
             android:icon="@drawable/credit_cart"
             android:title="@string/menu_odemeler" />
+        <item
+            android:id="@+id/nav_bonuslar"
+            android:icon="@drawable/heart_shablon"
+            android:title="@string/menu_bonuslar" />
+
+        <group
+            android:id="@+id/menu_bottom1"
+            android:checkableBehavior="none">
+
+            <item
+                android:id="@+id/nav_kartlar"
+                android:icon="@drawable/card"
+                android:title="@string/menu_kartlar"/>
+
+            <item
+                android:id="@+id/nav_shablon"
+                android:icon="@drawable/shablon"
+                android:title="@string/menu_shablon"/>
+
+            <item
+                android:id="@+id/nav_bonuslara_cevir"
+                android:icon="@drawable/ic_exchange"
+                android:title="@string/menu_Bonuslara_cevir" />
+
+
+
+
+        </group>
+
         <item
             android:id="@+id/nav_melumat"
             android:icon="@drawable/ic_information"
@@ -23,28 +50,30 @@
             android:id="@+id/nav_elaqe"
             android:icon="@drawable/contactsvg"
             android:title="@string/menu_Elaqe" />
+
         <item
-            android:id="@+id/nav_bonuslara_cevir"
-            android:icon="@drawable/ic_exchange"
-            android:title="@string/menu_Bonuslara_cevir" />
+            android:id="@+id/nav_teklif"
+            android:icon="@drawable/ic_recommend"
+            android:title="@string/menu_teklif" />
         <item
             android:id="@+id/nav_devetet"
             android:icon="@drawable/ic_share"
             android:title="@string/menu_paylash" />
+
     </group>
 
     <group
         android:id="@+id/menu_bottom"
         android:checkableBehavior="none">
 
-            <item
-                android:id="@+id/nav_tenzimlemeler"
-                android:icon="@drawable/settingsvg"
-                android:title="@string/menu_Tenzimlemeler" />
-            <item
-                android:id="@+id/nav_cixish"
-                android:icon="@drawable/ic_exit"
-                android:title="@string/menu_chixish" />
+        <item
+            android:id="@+id/nav_tenzimlemeler"
+            android:icon="@drawable/settingsvg"
+            android:title="@string/menu_Tenzimlemeler" />
+        <item
+            android:id="@+id/nav_cixish"
+            android:icon="@drawable/ic_exit"
+            android:title="@string/menu_chixish" />
     </group>
 
 </menu>

@@ -10,8 +10,9 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.aris.paytraffic.MainActivity;
 import com.aris.paytraffic.R;
+import com.aris.paytraffic.activiy.KabelTv;
+import com.aris.paytraffic.activiy.MobileOperator;
 import com.aris.paytraffic.activiy.QrCodeActivity;
 import com.aris.paytraffic.drawerMenu.model.Category;
 
@@ -53,6 +54,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ImageView categoryImageView;
         TextView categoryName;
         ConstraintLayout container;
+
         public ViewHolder(View view) {
             super(view);
             container = view.findViewById(R.id.container);
@@ -64,12 +66,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View v) {
                     switch (getAdapterPosition()) {
-                        case 0 :
+                        case 0:
                             Intent intent = new Intent(v.getContext(), QrCodeActivity.class);
                             v.getContext().startActivity(intent);
                             break;
                         case 1:
-                            intent = new Intent(v.getContext(), MainActivity.class);
+                            intent = new Intent(v.getContext(), MobileOperator.class);
+                            v.getContext().startActivity(intent);
+                            break;
+                        case 2:
+                            intent = new Intent(v.getContext(), KabelTv.class);
                             v.getContext().startActivity(intent);
                             break;
                     }
